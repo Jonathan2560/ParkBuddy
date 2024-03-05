@@ -4,6 +4,7 @@ class GaragesController < ApplicationController
 
   def index
     @garages = Garage.all
+    @reservation = Reservation.new
   end
 
   def show
