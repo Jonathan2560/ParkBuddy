@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :garages, only: [:show, :index, :new, :create, :destroy] do
     resources :reservations, only: [:show, :create]
   end
-  resources :reservations, only: :index
+  resources :reservations, only: [:index, :delete]
 end
