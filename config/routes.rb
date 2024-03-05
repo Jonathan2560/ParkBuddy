@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :garages, only: [:show, :index, :new, :create, :destroy] do
-    resources :reservations, only: [:show, :create]
+    resources :reservations, only: [:show, :new, :create]
   end
-  resources :reservations, only: [:index, :delete]
+  resources :reservations, only: [:index, :destroy]
 end
