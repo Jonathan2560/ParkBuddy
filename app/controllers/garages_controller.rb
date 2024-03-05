@@ -6,7 +6,6 @@ class GaragesController < ApplicationController
   end
 
   def show
-    @garage = Garage.new
   end
 
   def new
