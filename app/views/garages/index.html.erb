@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Select your moment.</h1>
+  <div class="map"></div>
+  <%= simple_form_for [@garages.first, @reservation] do |f| %>
+  <%= f.input :from %>
+  <%= f.input :until %>
+  <%= f.submit "make a reservation" %>
+<% end %>
+</div>
