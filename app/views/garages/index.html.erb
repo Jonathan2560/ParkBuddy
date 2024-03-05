@@ -1,5 +1,8 @@
 <div class="container">
-  <h1>Select your moment.</h1>
+  <div class="highlight-box">
+    <div class="highlight"></div>
+    <h1>Select your moment.</h1>
+  </div>
   <div class="map"></div>
   <%= simple_form_for [@garages.first, @reservation] do |f| %>
   <%= f.input :from %>
