@@ -1,0 +1,101 @@
+// GENERAL HOMEPAGE
+
+.homepage {
+  background-color: white;
+}
+
+.main_title {
+  font-weight: 400;
+  margin: 20px;
+}
+
+.step_title {
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 500;
+  size: 40px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+// CARDS
+.step_1,
+.step_2,
+.step_3,
+.become_an_owner {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .arrow {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+}
+
+.step_1 {
+  background-color: $white;
+  color: $black-text;
+
+  .arrow {
+    color: $black-text;
+  }
+
+  h1 {
+    color: black;
+  }
+}
+
+.step_2 {
+  background-color: $pink;
+  color: $red-text;
+
+  .arrow {
+    color: $red-text;
+  }
+
+  h1 {
+    color: $red-text;
+  }
+}
+
+.step_3 {
+  background-color: $dark-green;
+  color: $green-text;
+
+  .arrow {
+    color: $green-text;
+  }
+
+  h1 {
+    color: $green-text;
+  }
+}
+
+.become_an_owner {
+  background-color: $black;
+  color: $black;
+
+  .arrow {
+    color: $white;
+  }
+
+  h1 {
+    color: $white;
+  }
+}
