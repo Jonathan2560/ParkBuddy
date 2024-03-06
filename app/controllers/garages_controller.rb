@@ -4,9 +4,12 @@ class GaragesController < ApplicationController
 
   def index
     @garages = Garage.all
+    if params[:until]
+      @garages = @garages.select { |garage| garage.available?(params[:from], params[:until]) }
+    end
     @reservation = Reservation.new
-
-    @markers = @garages.geocoded.map do |garage|
+    # Not working filter, remove available method in garage and use sql to select it from db
+    @markers = @garages.map do |garage|
       {
         lat: garage.latitude,
         lng: garage.longitude,
