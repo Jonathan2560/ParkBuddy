@@ -2,18 +2,5 @@ h1 {
   font-size: $h1;
   color: $black-text;
   position: relative;
-}
-
-.highlight-box {
-  position: relative;
-  margin-right: 10px;
-}
-
-.highlight {
-  background-color: $pink;
-  height: 25%;
-  position: absolute;
-  top: 70%;
-  left: 0%;
-  right: 0%;
+  display: inline-block
 }
