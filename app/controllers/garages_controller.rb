@@ -5,6 +5,13 @@ class GaragesController < ApplicationController
   def index
     @garages = Garage.all
     @reservation = Reservation.new
+
+    @markers = @garages.geocoded.map do |garage|
+      {
+        lat: garage.latitude,
+        lng: garage.longitude
+      }
+    end
   end
 
   def show

@@ -2,5 +2,8 @@ class Garage < ApplicationRecord
   belongs_to :user
   has_many :reservations
 
-  validates :address, :width, :length, :price_per_minute, :name, presence: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
+  validates :address, :width, :length, :price_per_hour, :name, presence: true
 end
