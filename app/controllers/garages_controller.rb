@@ -35,6 +35,6 @@ class GaragesController < ApplicationController
   end
 
   def garage_params
-    params.require(:garage).permit(:address, :width, :length, :price_per_hour, :name)
+    params.require(:garage).permit(:address, :width, :length, :price_per_minute, :name)
   end
 end
