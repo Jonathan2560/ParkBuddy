@@ -4,7 +4,7 @@ class CreateGarages < ActiveRecord::Migration[7.1]
       t.string :address
       t.integer :width
       t.integer :length
-      t.float :price_per_hour
+      t.float :price_per_minute
       t.string :name
       t.references :user, null: false, foreign_key: true
 
