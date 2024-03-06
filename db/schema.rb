@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_112841) do
     t.string "address"
     t.integer "width"
     t.integer "length"
-    t.float "price_per_hour"
+    t.float "price_per_minute"
     t.string "name"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
