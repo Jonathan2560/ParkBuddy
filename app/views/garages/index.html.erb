@@ -3,10 +3,17 @@
     <div class="highlight"></div>
     <h1>Select your moment.</h1>
   </div>
-  <div class="map"></div>
+  <div style="width: 100%; height: 400px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <%= simple_form_for [@garages.first, @reservation] do |f| %>
-  <%= f.input :from %>
-  <%= f.input :until %>
+  <%= f.input :from,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :until,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
   <%= f.submit "make a reservation" %>
 <% end %>
 </div>
