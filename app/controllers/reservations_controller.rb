@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
   end
 
   def index
-    @garage = Garage.find(params[:garage_id])
+    @garages = Garage.find(params[:garage_id])
     @reservations = @garage.reservations
   end
 
