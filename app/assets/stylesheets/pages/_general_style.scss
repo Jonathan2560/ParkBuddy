@@ -1,6 +1,22 @@
 h1 {
   font-size: $h1;
+  font-weight: 400;
   color: $black-text;
   position: relative;
-  display: inline-block
+  display: inline-block;
+  margin: 0 0 15px 0;
+}
+
+body {
+  color: $black;
+}
+
+.primary-button {
+  margin: 10px auto 0 auto;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid $black;
+  text-decoration: none;
+  color: black;
+  border-radius: 30px;
 }

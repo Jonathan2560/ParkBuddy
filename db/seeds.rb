@@ -16,7 +16,7 @@ garage = Garage.new(name:"Pauline's parking",
   garage.save!
 
 garage = Garage.new(name: "Jonathan's parking",
-  address: "avenue de chant d'Oiseau 158, 1160 Auderghem",
+  address: "Vogelzang 158, 1160 Oudergem",
   width:230,
   length:400,
   price_per_minute:0.20,
@@ -24,7 +24,7 @@ garage = Garage.new(name: "Jonathan's parking",
   garage.save!
 
 garage = Garage.new(name:"Pedro's parking",
-  address: "Av. Léopold Wiener 6, 1170 Watermael-Boisfort",
+  address: "Léopold Wienerlaan 6, 1170 Watermaal-Bosvoorde",
   width:250,
   length:400,
   price_per_minute:0.18,

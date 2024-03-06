@@ -17,6 +17,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.create(reservation_params)
+    @reservation.user = current_user
     @reservation.garage = @garage
     if @reservation.save
       redirect_to reservation_path(@reservation)

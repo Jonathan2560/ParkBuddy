@@ -9,7 +9,8 @@ class GaragesController < ApplicationController
     @markers = @garages.geocoded.map do |garage|
       {
         lat: garage.latitude,
-        lng: garage.longitude
+        lng: garage.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {garage: garage})
       }
     end
   end

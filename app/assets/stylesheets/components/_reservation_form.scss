@@ -1,0 +1,18 @@
+.new_reservation {
+  display: flex;
+  flex-direction: column;
+}
+
+.new_reservation input {
+  color: $black;
+  border-radius: 30px;
+}
+
+.new_reservation input[type="submit"] {
+  margin: 10px auto 0 auto;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 0.5px solid $black;
+  display: inline-block;
+
+}

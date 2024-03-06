@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Let's park!</h1>
+  <p>You've booked a parking spot from <%= @reservation.from %> until <%= @reservation.until %></p>
+  <p>Thank you for parking with ParkBuddy today. Have a lovely day!</p>
+  <div class="d-flex justify-content-center">
+    <%= link_to "Go back to map", garages_path, class:"primary-button" %>
+  </div>
+</div>
