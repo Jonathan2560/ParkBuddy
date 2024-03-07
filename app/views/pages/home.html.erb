@@ -3,12 +3,15 @@
     <h1 class="main_title">Find your <br>
     parking spot.</h1>
 
-
     <%= form_with url: garages_path, method: :get, html: { class:"form_address" } do |f| %>
     <%=  f.text_field :address, value: params[:address], class: "input_form" %>
     <%= f.submit "LET'S GO", class: "submit_form" %>
     <% end %>
 
+    <%= simple_form_for @availibility do |f| %>
+      <%= f.input :address, class:"input_form" %>
+      <%= f.submit "LET'S GO", class: "submit_form" %>
+    <% end %>
 
       <div class="step_1">
         <p>HOMEPAGE</p>
