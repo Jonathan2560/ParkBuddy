@@ -3,23 +3,12 @@ class GaragesController < ApplicationController
   before_action :set_garage, only: [:show, :destroy]
 
   def index
-    if params[:address].present?
-      current_user.update(address: params[:address])
-    end
-    @garages = Garage.near(current_user.address, 3)
-    # if params[:until] && params[:from]
-    #   @garages = @garages.select do |garage|
-    #     garage.reservations.none? do |reservation|
-    #       (reservation.from < params[:until] && reservation.from > params[:from]) ||
-    #       (reservation.until < params[:until] && reservation.until > params[:from])
-    #     end
-    #   end
-    # end
+    @garages = Garage.near(params[:address], 3)
+
     if params[:until].present?
       @garages = @garages.reject do |garage|
         garage.reservations.any? do |reservation|
-          raise
-          (reservation.from < params[:until].to_datetime && reservation.until > params[:from].to_datetime)
+          (reservation.until > params[:from].to_datetime && reservation.from < params[:until].to_datetime)
         end
       end
     end
