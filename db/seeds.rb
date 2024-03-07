@@ -12,7 +12,7 @@ user5 = User.create!(email: "nicolas@mail.com", password: "123456")
 user6 = User.create!(email: "benjamin@mail.com", password: "123456")
 user7 = User.create!(email: "yassir@mail.com", password: "123456")
 user8 = User.create!(email: "gauthier@mail.com", password: "123456")
-user9 = User.create!(email: "laure@mail.com", password: "123456")
+user9 = User.create!(email: "tatiana@mail.com", password: "123456")
 user10 = User.create!(email: "hélène@mail.com", password: "123456")
 user11 = User.create!(email: "sofia@mail.com", password: "123456")
 user12 = User.create!(email: "diane@mail.com", password: "123456")
@@ -32,6 +32,9 @@ garage1 = Garage.new(name:"Pauline's parking",
   length:450,
   price_per_minute: 0.39,
   user: user1)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage1.png')
+  file = File.open(image_path)
+  garage1.photo.attach(io: file, filename: "garage1.png", content_type: "image/png")
   garage1.save!
 
 garage2 = Garage.new(name: "Jonathan's parking",
@@ -40,6 +43,9 @@ garage2 = Garage.new(name: "Jonathan's parking",
   length:400,
   price_per_minute:0.20,
   user: user2)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage2.png')
+  file = File.open(image_path)
+  garage2.photo.attach(io: file, filename: "garage2.png", content_type: "image/png")
   garage2.save!
 
 garage3 = Garage.new(name:"Pedro's parking",
@@ -48,14 +54,20 @@ garage3 = Garage.new(name:"Pedro's parking",
   length:400,
   price_per_minute:0.18,
   user: user3)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage3.png')
+  file = File.open(image_path)
+  garage3.photo.attach(io: file, filename: "garage3.png", content_type: "image/png")
   garage3.save!
 
 garage4 = Garage.new(name:"Caro's parking",
-  address: "Av. de Tervueren 137, 1150 Woluwe-Saint-Pierre",
+  address: "Avenue de Tervueren 137, 1150 Woluwe-Saint-Pierre",
   width:200,
   length:390,
   price_per_minute:0.25,
   user: user4)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage4.png')
+  file = File.open(image_path)
+  garage4.photo.attach(io: file, filename: "garage4.png", content_type: "image/png")
   garage4.save!
 
 garage5 = Garage.new(name:"Nicolas's parking",
@@ -64,46 +76,64 @@ garage5 = Garage.new(name:"Nicolas's parking",
   length:385,
   price_per_minute:0.25,
   user: user5)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage5.png')
+  file = File.open(image_path)
+  garage5.photo.attach(io: file, filename: "garage5.png", content_type: "image/png")
   garage5.save!
 
 garage6 = Garage.new(name:"Benjamin's parking",
-  address: "Rue du Page 65, 1050 Ixelles",
+  address: "Rue de Livourne 116, 1050 Ixelles",
   width:195,
   length:387,
   price_per_minute:0.28,
   user: user6)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage6.png')
+  file = File.open(image_path)
+  garage6.photo.attach(io: file, filename: "garage6.png", content_type: "image/png")
   garage6.save!
 
 garage7 = Garage.new(name:"Laure's parking",
-  address: "Brusselsesteenweg 14, 1070 Anderlecht",
+  address: "rue de Liège 46, 1190 Forest ",
   width:189,
   length:354,
   price_per_minute:0.21,
   user: user7)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage7.png')
+  file = File.open(image_path)
+  garage7.photo.attach(io: file, filename: "garage7.png", content_type: "image/png")
   garage7.save!
 
 garage8 = Garage.new(name:"Gauthier's parking",
-  address: "Rue de Ribaucourt 6, 1080 Molenbeek-Saint-Jean",
+  address: "Rue de l'Indépendance 70, 1080 Molenbeek-Saint-Jean",
   width:205,
   length:378,
   price_per_minute:0.29,
   user: user8)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage8.png')
+  file = File.open(image_path)
+  garage8.photo.attach(io: file, filename: "garage8.png", content_type: "image/png")
   garage8.save!
 
-garage9 = Garage.new(name:"Laure's parking",
-  address: "Rue Eugène Cattoir 5, 1050 Ixelles",
+garage9 = Garage.new(name:"Tatiana's parking",
+  address: "Rue Juliette Wytsman 89, 1050 Ixelles",
   width:200,
   length:350,
   price_per_minute:0.32,
   user: user9)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage9.png')
+  file = File.open(image_path)
+  garage9.photo.attach(io: file, filename: "garage9.png", content_type: "image/png")
   garage9.save!
 
 garage10 = Garage.new(name:"Hélène's parking",
-  address: "Av. Brugmann 519, 1180 Uccle",
+  address: "Avenue des Sept Bonniers, 1190 Forest",
   width:220,
   length:370,
   price_per_minute:0.36,
   user: user10)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage10.png')
+  file = File.open(image_path)
+  garage10.photo.attach(io: file, filename: "garage10.png", content_type: "image/png")
   garage10.save!
 
 garage11 = Garage.new(name:"Sofia's parking",
@@ -112,14 +142,20 @@ garage11 = Garage.new(name:"Sofia's parking",
   length:330,
   price_per_minute:0.24,
   user: user11)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage11.png')
+  file = File.open(image_path)
+  garage11.photo.attach(io: file, filename: "garage11.png", content_type: "image/png")
   garage11.save!
 
 garage12 = Garage.new(name:"Diane's parking",
-  address: "Cantersteen 10, 1000 Bruxelles",
+  address: "rue du Noyer 86, 1030 Schaerbeek",
   width:170,
   length:360,
   price_per_minute:0.31,
   user: user12)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage12.png')
+  file = File.open(image_path)
+  garage12.photo.attach(io: file, filename: "garage12.png", content_type: "image/png")
   garage12.save!
 
 garage13 = Garage.new(name:"Juan's parking",
@@ -128,14 +164,20 @@ garage13 = Garage.new(name:"Juan's parking",
   length:330,
   price_per_minute:0.30,
   user: user13)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage13.png')
+  file = File.open(image_path)
+  garage13.photo.attach(io: file, filename: "garage13.png", content_type: "image/png")
   garage13.save!
 
 garage14 = Garage.new(name:"Harold's parking",
-  address: "Chaussée de Waterloo 203, 1060 Saint-Gilles",
+  address: "Chaussée de Waterloo 374, 1060 Saint-Gilles",
   width:230,
   length:430,
   price_per_minute:0.21,
   user: user14)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage14.png')
+  file = File.open(image_path)
+  garage14.photo.attach(io: file, filename: "garage14.png", content_type: "image/png")
   garage14.save!
 
 garage15 = Garage.new(name:"Maryline's parking",
@@ -144,6 +186,9 @@ garage15 = Garage.new(name:"Maryline's parking",
   length:400,
   price_per_minute:0.29,
   user: user15)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage15.png')
+  file = File.open(image_path)
+  garage15.photo.attach(io: file, filename: "garage15.png", content_type: "image/png")
   garage15.save!
 
 garage16 = Garage.new(name:"Damien's parking",
@@ -152,38 +197,53 @@ garage16 = Garage.new(name:"Damien's parking",
   length:489,
   price_per_minute:0.32,
   user: user16)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage16.png')
+  file = File.open(image_path)
+  garage16.photo.attach(io: file, filename: "garage16.png", content_type: "image/png")
   garage16.save!
 
 garage17 = Garage.new(name:"Tom's parking",
-  address: "Rue Voot 30, 1200 Woluwe-Saint-Lambert",
+  address: "Rue Vandenhoven 3, 1200 Woluwe-Saint-Lambert",
   width:212,
   length:432,
   price_per_minute:0.22,
   user: user17)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage17.png')
+  file = File.open(image_path)
+  garage17.photo.attach(io: file, filename: "garage17.png", content_type: "image/png")
   garage17.save!
 
 garage18 = Garage.new(name:"Louis's parking",
-  address: "Avenue des Casernes 21, 1040 Etterbeek",
+  address: "Avenue Victor 74, 1040 Etterbeek",
   width:182,
   length:352,
   price_per_minute:0.26,
   user: user18)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage18.png')
+  file = File.open(image_path)
+  garage18.photo.attach(io: file, filename: "garage18.png", content_type: "image/png")
   garage18.save!
 
 garage19 = Garage.new(name:"Gaston's parking",
-  address: "Rue Général Leman 36, 1040 Etterbeek",
+  address: "Rue Général Leman 17, 1040 Etterbeek",
   width:198,
   length:342,
   price_per_minute:0.16,
   user: user19)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage19.png')
+  file = File.open(image_path)
+  garage19.photo.attach(io: file, filename: "garage19.png", content_type: "image/png")
   garage19.save!
 
 garage20 = Garage.new(name:"Lorenz's parking",
-  address: "Avenue de Tervueren 59, 1040 Etterbeek",
+  address: "rue des Aduatiques 7, 1040 Etterbeek",
   width:200,
   length:355,
   price_per_minute:0.26,
   user: user20)
+  image_path = Rails.root.join('app', 'assets', 'images', 'garage20.png')
+  file = File.open(image_path)
+  garage20.photo.attach(io: file, filename: "garage20.png", content_type: "image/png")
   garage20.save!
 
 # Bookings from users
