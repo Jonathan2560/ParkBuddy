@@ -203,5 +203,4 @@ Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(
 Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage3, user: user3)
 Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage2, user: user2)
 
-
   puts "Seed done!"
