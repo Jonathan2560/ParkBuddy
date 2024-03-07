@@ -3,7 +3,7 @@
       <%= image_tag "logo.png" %>
     <% end %>
     <% if user_signed_in? %>
-      <%= link_to "Log out", destroy_user_session_path, class: "text-white me-4", data: {turbo_method: :delete} %>
+      <%= link_to "Log out", destroy_user_session_path, class: "text-black login", data: {turbo_method: :delete} %>
     <% else %>
       <%= link_to "Login", new_user_session_path, class: "login" %>
     <% end %>
