@@ -13,7 +13,9 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
+    <% unless params[:controller] == "devise/registrations" || params[:controller] == "devise/sessions"%>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= render "shared/flashes" %>
     <%= yield %>
   </body>
