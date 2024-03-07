@@ -1,20 +1,19 @@
-<div class="container">
   <div class="highlight-box">
     <div class="highlight"></div>
-    <h1>Select your parking spot.</h1>
+    <h1 class="select_you_parking_spot">Select your parking spot.</h1>
   </div>
 
-  <div style="width: 100%; height: 400px;"
+  <div class= "map_box", style="width: 100%; height: 500px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <%= form_with url: garages_path, method: :get do |f| %>
-    <%= f.datetime_local_field :from, value: params[:from] %>
-    <%= f.datetime_local_field :until, value: params[:until] %>
-    <%= f.hidden_field :address, value: params[:address] %>
-    <%= f.submit "select your time" %>
-  <% end %>
 
-</div>
+    <%= form_with url: garages_path, method: :get, html: { class:"timing_box" } do |f| %>
+      <h2 class="when_parking">When are you parking?</h2>
+      <%= f.datetime_local_field :from, value: params[:from], class:"timing"  %>
+      <%= f.datetime_local_field :until, value: params[:until], class:"timing" %>
+      <%= f.hidden_field :address, value: params[:address] %>
+      <%= f.submit "SELECT YOUR TIME", class: "select_your_time_button" %>
+    <% end %>
