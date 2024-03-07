@@ -3,7 +3,7 @@ class GaragesController < ApplicationController
   before_action :set_garage, only: [:show, :destroy]
 
   def index
-    @garages = Garage.near(params[:address], 3)
+    @garages = Garage.near(params[:address], 5)
 
     if params[:until].present?
       @garages = @garages.reject do |garage|
