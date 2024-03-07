@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :reservations, only: [:index, :new, :create]
   end
   resources :reservations, only: [:destroy, :show]
+  resources :availibilities, only: :create
 end

@@ -3,10 +3,19 @@ class GaragesController < ApplicationController
   before_action :set_garage, only: [:show, :destroy]
 
   def index
-    @garages = Garage.all
+    @garages = Garage.near(params[:address], 3)
+
+    if params[:until].present?
+      @garages = @garages.reject do |garage|
+        garage.reservations.any? do |reservation|
+          (reservation.until > params[:from].to_datetime && reservation.from < params[:until].to_datetime)
+        end
+      end
+    end
+
     @reservation = Reservation.new
 
-    @markers = @garages.geocoded.map do |garage|
+    @markers = @garages.map do |garage|
       {
         lat: garage.latitude,
         lng: garage.longitude,
