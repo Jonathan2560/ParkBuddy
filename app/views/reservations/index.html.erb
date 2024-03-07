@@ -1,0 +1,22 @@
+<div class="container p-4">
+  <h1>Your reservations</h1>
+  <% if @reservations.any? %>
+    <% @reservations.each do |reservation| %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2>Your spot is @<%= @garage.address %></h2>
+          <h3 class="mt-2">Price: €<%= ((((reservation.until - reservation.from)).to_i / 60) * @garage.price_per_minute).round %></h3>
+          <p class="mb-2"><strong>From:</strong> <%= reservation.from.strftime("%H:%M %d/%m/%Y") %>,<br><strong>until:</strong> <%= reservation.until.strftime("%H:%M %d/%m/%Y") %></p>
+          <%= link_to "Cancel",
+            reservation_path(reservation), class:"btn-cancel",
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+          %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <h3 class="no-reservations-text">You haven't made any reservations yet.</h3>
+    <%= link_to "Go to homepage", root_path, class:"back-to-home" %>
+  <% end %>
+</div>

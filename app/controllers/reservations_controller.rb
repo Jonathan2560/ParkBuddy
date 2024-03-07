@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
   end
 
   def index
-    @garages = Garage.find(params[:garage_id])
+    @garage = Garage.find(params[:garage_id])
     @reservations = @garage.reservations
   end
 
@@ -27,8 +27,9 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    @garage = @reservation.garage
     @reservation.destroy
-    redirect_to reservations_path
+    redirect_to garage_reservations_path(@garage)
   end
 
   private
