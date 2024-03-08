@@ -3,10 +3,15 @@
     <h1 class="main_title">Find your <br>
     parking spot.</h1>
 
-    <%= form_with url: garages_path, method: :get, html: { class:"form_address" } do |f| %>
-    <%=  f.text_field :address, value: params[:address], class: "input_form" %>
-    <%= f.submit "LET'S GO", class: "submit_form" %>
+    <%= form_with url: garages_path, method: :get, class: "search_button" do |f| %>
+      <div class="form_address" data-controller= "address-autocomplete" data-address-autocomplete-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        <%= f.text_field :address, value: params[:address], class: "input_form d-none", data: { address_autocomplete_target: "address" } %>
+      </div>
+        <%= f.submit "LET'S GO", class: "submit_form" %>
     <% end %>
+
+
+
 
       <div class="step_1">
         <p>HOMEPAGE</p>
@@ -22,7 +27,6 @@
         <h2>Enter arrival / depature time</h2>
         <div class= "d-flex justify-content-between align-items-center">
           <h2>Pick your spot</h2>
-          <%= image_tag "arrow-red.png", class: "arrow_image" %>
          </div>
       </div>
 
@@ -31,7 +35,6 @@
         <h1 class="step_title">STEP 3</h1>
         <div class= "d-flex justify-content-between align-items-center">
           <h2>Confirm your reservation</h2>
-          <%= image_tag "arrow-green.png", class: "arrow_image" %>
         </div>
       </div>
 
