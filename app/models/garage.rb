@@ -29,9 +29,9 @@ class Garage < ApplicationRecord
     difference_in_price = price_per_minute - (price_sum / Garage.count)
 
     if difference_in_price.negative?
-      "Your price is €#{difference_in_price.abs.round(2)} cheaper than the average price."
+      "Your price is €#{difference_in_price.abs.round(2)} cheaper than the average price in your area."
     elsif difference_in_price.positive?
-      "Your price is €#{difference_in_price.round(2)} more expensive than the average price."
+      "Your price is €#{difference_in_price.round(2)} more expensive than the average price in your area."
     else
       "Your price is the same as the average price."
     end
