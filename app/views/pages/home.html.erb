@@ -35,12 +35,13 @@
         </div>
       </div>
 
-      <div class="become_an_owner">
-      <h1 class="step_title">BECOME AN OWNER</h1>
-        <div class= "d-flex justify-content-end">
-          <%= image_tag "arrow-white.png", class: "arrow_image" %>
+      <%= link_to new_garage_path do %>
+        <div class="become_an_owner">
+        <h1 class="step_title">BECOME AN OWNER</h1>
+          <div class= "d-flex justify-content-end">
+            <%= image_tag "arrow-white.png", class: "arrow_image" %>
+          </div>
         </div>
-      </div>
-
+      <% end %>
   </div>
 </div>
