@@ -1,0 +1,32 @@
+<div class="addparkingform">
+  <div class="container mx-4">
+
+      <h2 class="text-center started">Add a parking.</h2>
+
+      <%= simple_form_for @garage, defaults: { input_html: { class: 'rounded-pill border border-dark text-black' }, label_html: { class: 'text-uppercase' } } do |f| %>
+       <%= f.input :photo, as: :file,
+                    label: "Show uw your street view." %>
+        <%= f.input :name,
+                    label: "What's the name?" %>
+        <%= f.input :address,
+                    label: "What's your address?" %>
+          <div class="row">
+            <div class="col-3">
+              <%= f.input :width %>
+            </div>
+            <div class="col-3">
+              <%= f.input :length %>
+            </div>
+              <div class="col-6">
+               <%= f.input :price_per_minute %>
+              </div>
+          </div>
+
+        <div class="text-center">
+          <div class="form-actions">
+            <%= f.button :submit, "LET'S ADD", class: "btn w-50 rounded-pill add-van-button " %>
+          </div>
+         </div>
+      <% end %>
+  </div>
+</div>
