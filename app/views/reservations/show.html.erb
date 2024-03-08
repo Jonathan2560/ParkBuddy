@@ -1,7 +1,9 @@
 <div class="container">
   <h1>Let's park!</h1>
-  <p>You've booked a parking spot from <%= @reservation.from %> until <%= @reservation.until %></p>
-  <p>Thank you for parking with ParkBuddy today. Have a lovely day!</p>
+  <%= cl_image_tag @reservation.garage.photo.key, height: 300, width: 400, crop: :fill %>
+  <p class="my-4 pe-2">You've booked a parking spot <strong>@<%= @reservation.garage.address %>,<br>from <%= @reservation.from.strftime("%H:%M %d/%m/%Y") %>,<br>until <%= @reservation.until.strftime("%H:%M %d/%m/%Y") %></strong></p>
+  <p class="mb-4">Price: €<%= ((((reservation.until - reservation.from)).to_i / 60) * @garage.price_per_minute).round %></p>
+  <p class="pe-2">Thank you for parking with ParkBuddy today. Have a lovely day!</p>
   <div class="d-flex justify-content-center">
     <%= link_to "Go back to map", garages_path, class:"primary-button" %>
   </div>
