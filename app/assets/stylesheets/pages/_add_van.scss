@@ -1,0 +1,26 @@
+.addparkingform {
+  background-color: #FFC3AD;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  color: hsl(0, 0%, 0%);
+  font-size: 15px;
+}
+
+.started {
+  color: #000000;
+  padding-bottom: 75px;
+  font-size: 40px;
+}
+
+.add-van-button {
+  background-color: #ffc0a9;
+  text-shadow: #000000;
+  color: #000000;
+  margin-top: 40px;
+  font-size: 20px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.688);
+}
