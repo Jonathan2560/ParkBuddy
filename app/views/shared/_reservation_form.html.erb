@@ -4,6 +4,6 @@
             input_html: { data: { controller: "datepicker" }, value: DateTime.now } %>
   <%= f.input :until,
             as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+            input_html: { data: { controller: "datepicker" }, value: params[:until] } %>
   <%= f.submit "make a reservation" %>
 <% end %>
