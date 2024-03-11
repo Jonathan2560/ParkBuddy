@@ -30,7 +30,7 @@ puts "Users created"
 
 # Adding new garage
 garage1 = Garage.new(name:"Pauline's parking",
-  address: "rue Saint-Bernard 94, 1060 Saint-Gilles",
+  address: "chaussée d'Ixelles 134, 1050 Ixelles",
   width:250,
   length:450,
   price_per_minute: 0.39,
@@ -43,7 +43,7 @@ garage1 = Garage.new(name:"Pauline's parking",
   puts "Created #{garage1}"
 
 garage2 = Garage.new(name: "Jonathan's parking",
-  address: "Vogelzang 158, 1160 Oudergem",
+  address: "rue de la Concorde 30, 1050 Ixelles",
   width:230,
   length:400,
   price_per_minute:0.20,
@@ -57,7 +57,7 @@ garage2 = Garage.new(name: "Jonathan's parking",
 
 
 garage3 = Garage.new(name:"Pedro's parking",
-  address: "Léopold Wienerlaan 6, 1170 Watermaal-Bosvoorde",
+  address: "Rue Keyenveld 85, 1050 Ixelles",
   width:250,
   length:400,
   price_per_minute:0.18,
@@ -70,7 +70,7 @@ garage3 = Garage.new(name:"Pedro's parking",
   puts "Created #{garage3}"
 
 garage4 = Garage.new(name:"Caro's parking",
-  address: "Avenue de Tervueren 137, 1150 Woluwe-Saint-Pierre",
+  address: "rue Anoul 30, 1050 Ixelles",
   width:200,
   length:390,
   price_per_minute:0.25,
@@ -83,7 +83,7 @@ garage4 = Garage.new(name:"Caro's parking",
   puts "Created #{garage4}"
 
 garage5 = Garage.new(name:"Nicolas's parking",
-  address: "Rue Leekaerts 29, 1140 Evere",
+  address: "Rue Kyenveld 25, 1050 Ixelles",
   width:205,
   length:385,
   price_per_minute:0.25,
@@ -96,7 +96,7 @@ garage5 = Garage.new(name:"Nicolas's parking",
   puts "Created #{garage5}"
 
 garage6 = Garage.new(name:"Benjamin's parking",
-  address: "Rue de Livourne 116, 1050 Ixelles",
+  address: "Rue du Berger 15, 1050 Ixelles",
   width:195,
   length:387,
   price_per_minute:0.28,
@@ -109,7 +109,7 @@ garage6 = Garage.new(name:"Benjamin's parking",
   puts "Created #{garage6}"
 
 garage7 = Garage.new(name:"Laure's parking",
-  address: "rue de Liège 46, 1190 Forest ",
+  address: "Rue Souveraine 10, 1050 Ixelles ",
   width:189,
   length:354,
   price_per_minute:0.21,
@@ -122,7 +122,7 @@ garage7 = Garage.new(name:"Laure's parking",
   puts "Created #{garage7}"
 
 garage8 = Garage.new(name:"Gauthier's parking",
-  address: "Rue de l'Indépendance 70, 1080 Molenbeek-Saint-Jean",
+  address: "Rue Bouré 16, 1050 Ixelles",
   width:205,
   length:378,
   price_per_minute:0.29,
@@ -135,7 +135,7 @@ garage8 = Garage.new(name:"Gauthier's parking",
   puts "Created #{garage8}"
 
 garage9 = Garage.new(name:"Tatiana's parking",
-  address: "Rue Juliette Wytsman 89, 1050 Ixelles",
+  address: "Rue du Prince Albert 29, 1050 Ixelles",
   width:200,
   length:350,
   price_per_minute:0.32,
@@ -148,7 +148,7 @@ garage9 = Garage.new(name:"Tatiana's parking",
   puts "Created #{garage9}"
 
 garage10 = Garage.new(name:"Hélène's parking",
-  address: "Avenue des Sept Bonniers, 1190 Forest",
+  address: "Rue Keyenveld 14, 1050 Ixelles",
   width:220,
   length:370,
   price_per_minute:0.36,
@@ -161,7 +161,7 @@ garage10 = Garage.new(name:"Hélène's parking",
   puts "Created #{garage10}"
 
 garage11 = Garage.new(name:"Sofia's parking",
-  address: "Rue du Noyer 236, 1030 Schaerbeek",
+  address: "Rue Keyenveld 58, 1050 Ixelles",
   width:190,
   length:330,
   price_per_minute:0.24,
@@ -174,7 +174,7 @@ garage11 = Garage.new(name:"Sofia's parking",
   puts "Created #{garage11}"
 
 garage12 = Garage.new(name:"Diane's parking",
-  address: "rue du Noyer 86, 1030 Schaerbeek",
+  address: "rue du Président 28, 1050 Ixelles",
   width:170,
   length:360,
   price_per_minute:0.31,
@@ -187,7 +187,7 @@ garage12 = Garage.new(name:"Diane's parking",
   puts "Created #{garage12}"
 
 garage13 = Garage.new(name:"Juan's parking",
-  address: "Avenue Wolvendael 4, 1180 Uccle",
+  address: "Rue Isidore Verheyden 1, 1050 Ixelles",
   width:190,
   length:330,
   price_per_minute:0.30,
@@ -200,7 +200,7 @@ garage13 = Garage.new(name:"Juan's parking",
   puts "Created #{garage13}"
 
 garage14 = Garage.new(name:"Harold's parking",
-  address: "Chaussée de Waterloo 374, 1060 Saint-Gilles",
+  address: "Rue Saint-Boniface 15, 1050 Ixelles",
   width:230,
   length:430,
   price_per_minute:0.21,
@@ -213,7 +213,7 @@ garage14 = Garage.new(name:"Harold's parking",
   puts "Created #{garage14}"
 
 garage15 = Garage.new(name:"Maryline's parking",
-  address: "Rue des Cèdres 2, 1170 Watermael-Boitsfort",
+  address: "Chaussée d'Ixelles 67, 1050 Ixelles",
   width:250,
   length:400,
   price_per_minute:0.29,
@@ -226,7 +226,7 @@ garage15 = Garage.new(name:"Maryline's parking",
   puts "Created #{garage15}"
 
 garage16 = Garage.new(name:"Damien's parking",
-  address: "Rue des Cèdres 2, 1170 Watermael-Boitsfort",
+  address: "Rue Longue Vie 31, 1050 Ixelles",
   width:225,
   length:489,
   price_per_minute:0.32,
@@ -239,7 +239,7 @@ garage16 = Garage.new(name:"Damien's parking",
   puts "Created #{garage16}"
 
 garage17 = Garage.new(name:"Tom's parking",
-  address: "Rue Vandenhoven 3, 1200 Woluwe-Saint-Lambert",
+  address: "Chaussée d'Ixelles 116, 1050 Ixelles",
   width:212,
   length:432,
   price_per_minute:0.22,
@@ -252,7 +252,7 @@ garage17 = Garage.new(name:"Tom's parking",
   puts "Created #{garage17}"
 
 garage18 = Garage.new(name:"Louis's parking",
-  address: "Avenue Victor 74, 1040 Etterbeek",
+  address: "rue Prince Royal 41, 1050 Ixelles",
   width:182,
   length:352,
   price_per_minute:0.26,
@@ -265,7 +265,7 @@ garage18 = Garage.new(name:"Louis's parking",
   puts "Created #{garage18}"
 
 garage19 = Garage.new(name:"Gaston's parking",
-  address: "Rue Général Leman 17, 1040 Etterbeek",
+  address: "Rue de Stassart 90, 1050 Ixelles",
   width:198,
   length:342,
   price_per_minute:0.16,
@@ -278,7 +278,7 @@ garage19 = Garage.new(name:"Gaston's parking",
   puts "Created #{garage19}"
 
 garage20 = Garage.new(name:"Lorenz's parking",
-  address: "rue des Aduatiques 7, 1040 Etterbeek",
+  address: "Rue de l'Arbre Bénit 15, 1050 Ixelles",
   width:200,
   length:355,
   price_per_minute:0.26,
