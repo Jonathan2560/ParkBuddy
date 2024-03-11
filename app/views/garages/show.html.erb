@@ -5,16 +5,16 @@
     <p class="my-4"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
     <div class="row justify-content-between">
       <div class="col-4">
-        <p><i class="fa-solid fa-ruler-vertical"></i>  <%= @garage.length %> cm</p>
+        <p><i class="fa-solid fa-ruler-vertical"></i>  Width: <%= @garage.length_in_meters %> m</p>
       </div>
       <div class="col-4">
-        <p><i class="fa-solid fa-ruler-horizontal"></i>  <%= @garage.width %> cm</p>
+        <p><i class="fa-solid fa-ruler-horizontal"></i>  Length: <%= @garage.width_in_meters %> m</p>
       </div>
       <div class="col-4">
-        <p><i class="fa-solid fa-square-parking"></i>  <%= @garage.length * @garage.width / 10000 %> m<sup>2</sup></p>
+        <p><i class="fa-solid fa-square-parking"></i>  <%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
       </div>
     </div>
-    <p><i class="fa-solid fa-tag"></i>  Price: €<%= @garage.price_per_minute %> per minute</p>
+    <p><i class="fa-solid fa-tag"></i>  Price: €<%= @garage.price_per_minute * 60 %> per hour</p>
   </div>
 </div>
 <div class="reservations-banner mt-4">
