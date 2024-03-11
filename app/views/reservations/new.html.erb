@@ -1,5 +1,21 @@
 <div class="container">
   <h1>Almost ready!</h1>
    <%= cl_image_tag @garage.photo.key, height: 300, width: 400, crop: :fill %>
+   <div>
+    <p class="my-4"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
+    <div class="row justify-content-between">
+      <div class="col-4">
+        <p><i class="fa-solid fa-ruler-vertical"></i>  Width: <%= @garage.length_in_meters %> m</p>
+      </div>
+      <div class="col-4">
+        <p><i class="fa-solid fa-ruler-horizontal"></i>  Length: <%= @garage.width_in_meters %> m</p>
+      </div>
+      <div class="col-4">
+        <p><i class="fa-solid fa-square-parking"></i>  <%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
+      </div>
+    </div>
+    <p><i class="fa-solid fa-tag"></i>  Price: €<%= @garage.price_per_minute * 60 %> per hour</p>
+  </div>
+</div>
   <%= render "shared/reservation_form" %>
 </div>
