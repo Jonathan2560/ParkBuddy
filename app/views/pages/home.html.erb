@@ -10,9 +10,6 @@
         <%= f.submit "LET'S GO", class: "submit_form" %>
     <% end %>
 
-
-
-
       <div class="step_1">
         <p>HOMEPAGE</p>
         <h1 class="step_title">STEP 1</h1>
@@ -40,11 +37,13 @@
 
       <%= link_to new_garage_path do %>
         <div class="become_an_owner">
-        <h1 class="step_title">BECOME AN OWNER</h1>
-          <div class= "d-flex justify-content-end">
-            <%= image_tag "arrow-white.png", class: "arrow_image" %>
+        <h1 class="owner_title">BECOME AN OWNER</h1>
+          <div class= "d-flex justify-content-start">
+
+            <%= button_tag "START", class: "start-button" %>
           </div>
         </div>
       <% end %>
+
   </div>
 </div>
