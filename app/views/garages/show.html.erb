@@ -1,30 +1,34 @@
-<div class="container ms-3">
-  <h1><%= @garage.name %></h1>
+<h1 class = "title_name_garage"><%=@garage.name%>.</h1>
+<p class="address-garage"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
   <%= cl_image_tag @garage.photo.key, class: "width-90", crop: :fill %>
-  <div>
-    <p class="my-4"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
-    <div class="row justify-content-between">
-      <div class="col-4">
-        <p><i class="fa-solid fa-ruler-vertical"></i>  <strong>W</strong> <%= @garage.length_in_meters %> m</p>
+  <div class="container ms-4">
+    <div class="row justify-content-between informations_garage">
+      <div class="col-6">
+        <p><strong>Width : </strong> <%= @garage.length_in_meters %> m</p>
       </div>
-      <div class="col-4">
-        <p><i class="fa-solid fa-ruler-horizontal"></i>  <strong>L</strong> <%= @garage.width_in_meters %> m</p>
+      <div class="col-6">
+        <p><strong>Length : </strong> <%= @garage.width_in_meters %> m</p>
       </div>
-      <div class="col-4">
-        <p><i class="fa-solid fa-square-parking"></i>  <%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
+      <br>
+      <div class="col-6">
+        <p><strong>Surface Area : </strong> <%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
+      </div>
+      <div class="col-6">
+        <p><strong>Price : </strong><%= (@garage.price_per_minute * 60).round %> €/hour</p>
       </div>
     </div>
-    <p><i class="fa-solid fa-tag"></i>  Price: €<%= (@garage.price_per_minute * 60).round %> per hour</p>
-  </div>
 </div>
 <div class="reservations-banner mt-4">
-  <h2><strong>Planned Bookings</strong></h2>
+  <h2 class = "title_planned_bookings" >PLANNED BOOKINGS</h2>
+  <HR>
   <% if @garage.reservations  %>
     <ul>
       <% @garage.reservations.each do |reservation| %>
         <li>
-          <%= reservation.from.strftime("%H:%M %d/%m/%Y") %> - <%= reservation.until.strftime("%H:%M %d/%m/%Y") %>
-          <br>earnings: €<%= ((((reservation.until - reservation.from)).to_i / 60) * @garage.price_per_minute).round %>, from <%= reservation.user.email %>
+          <span class="fw-medium">From :</span> <%= reservation.from.strftime("%H:%M --- %d/%m/%Y") %> <br>
+          <span class="fw-medium">Until :</span> <%= reservation.until.strftime("%H:%M --- %d/%m/%Y") %><br>
+          <span class="fw-medium">Earnings :</span> <%= ((((reservation.until - reservation.from)).to_i / 60) * @garage.price_per_minute).round %> € <br>
+          <span class="fw-medium">Username :</span> <%= reservation.user.email %>
         </li>
       <% end %>
     </ul>
@@ -32,7 +36,7 @@
     <p>No reservations planned for now.</p>
   <% end %>
 </div>
-<div class="container text-center mt-4 pb-4">
+<div class="container text-center my-4 pb-4">
   <%= image_tag "earnings.png", alt: "money", width:60%>
   <p class="mt-2">Since <%= @garage.created_at.strftime("%d/%m/%Y") %> you earned €<%= @garage.total_earnings %></p>
   <hr class="my-2">
@@ -41,9 +45,10 @@
   <hr class="my-4">
   <%= image_tag "award.png", alt: "award", width:70%>
   <p class="mt-2"><%= @garage.avg_difference %></p>
-  <hr class="my-4">
-    <%= link_to "Remove my parking spot",
-            garage_path(@garage), class:"btn-cancel my-4 px-2",
+  <hr class="my-4 pb-3">
+    <%= link_to "REMOVE PARKING",
+            garage_path(@garage), class:"btn-cancel mt-4",
             data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
     %>
+</div>
 </div>
