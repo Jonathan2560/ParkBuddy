@@ -1,13 +1,42 @@
 .width-90 {
-  width: 90%;
+  width: 100%;
 }
 
 .reservations-banner {
   background-color: $pink;
-  padding: 30px;
+  padding: 39px;
 }
 
 .fa-solid {
   font-size: x-large;
   color: #9f9f9f;
+}
+
+.title_name_garage {
+  margin-left: 26px;
+}
+
+.title_planned_bookings {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.address-garage {
+  margin-left: 25px;
+}
+
+.informations_garage {
+  margin-top: 30px;
+}
+
+.btn-cancel {
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  background-color: #FFC3AD;
+  padding: 15px;
+  font-size: 14px;
+  font-size: 14px;
+  text-decoration: none;
 }
