@@ -1,13 +1,13 @@
 class ReservationsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
   before_action :set_reservation, only: [:show, :destroy]
-  before_action :set_garage, only: [:index, :new, :create]
+  before_action :set_garage, only: [:new, :create]
 
   def show
   end
 
   def index
-    @garage = Garage.find(params[:garage_id])
+    @reservations = Reservation.where(user: current_user)
     @reservations = @garage.reservations
   end
 
