@@ -7,7 +7,7 @@
       <div class="form_address" data-controller= "address-autocomplete" data-address-autocomplete-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         <%= f.text_field :address, value: params[:address], class: "input_form d-none", data: { address_autocomplete_target: "address" } %>
       </div>
-        <%= f.submit "LET'S GO", class: "submit_form" %>
+      <%= f.submit "LET'S GO", class: "submit_form" %>
     <% end %>
 
       <div class="step_1">

@@ -1,10 +1,11 @@
 .mapboxgl-ctrl-geocoder--input {
-  margin-left: 21px;
+  margin-left: -5px;
   border-radius: 30px 30px 30px 30px;
   border: 1px solid black;
   padding: 11px;
   font-size: 11px;
-  width: 180%;
+  width: 192%;
+  max-width: 168%;
 }
 
 .mapboxgl-ctrl-geocoder--button,
@@ -16,17 +17,30 @@
 .submit_form {
   border-radius: 0 30px 30px 0;
   background-color: black;
-  margin-left: -100px;
   border: 0.50px solid black;
   color: white;
-  padding: 8px;
   font-size: 9px;
   z-index: 2;
   position: static;
-  margin-left: 100px;
+  margin-left: 80px;
   font-size: 16px;
+  padding: 0 12px;
+  height: 40px;
 }
 
 .search_button {
   display: flex;
+  margin-left: 21px;
+}
+
+.mapboxgl-ctrl-geocoder--button {
+  display: none !important;
+}
+
+.suggestions-wrapper {
+  margin: 10px 0px 0px 10px;
+}
+
+.mapboxgl-ctrl-geocoder--powered-by {
+  display: none !important;
 }
