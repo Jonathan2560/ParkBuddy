@@ -1,26 +1,32 @@
 .mapboxgl-popup {
-  max-width: 80px;
+  max-width: 100px;
 }
 
 .mapboxgl-popup-content {
   text-align: left;
+  padding: 20px 15px 25px 15px;
 
-  h1 {
+  h1,
+  h2 {
     font-family: $headers-font;
-    margin-bottom: 5px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
   }
 
   p {
     font-family: $body-font;
-    margin-bottom: 15px;
+    padding-bottom: 10px;
   }
 
   a {
     text-decoration: none;
-    color: black;
-    border: 1px solid black;
     border-radius: 30px;
-    margin-top: 20px;
-    padding: 5px 8px 5px 8px;
+    padding: 10px;
+    font-size: 1.45em;
+    margin-bottom: 20px;
+    background-color: #FFC3AD;
+    color: #302f2f;
+    text-transform: capitalize;
+    border: none;
   }
 }
