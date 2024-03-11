@@ -32,39 +32,43 @@
   }
 }
 
+
 .menu-dropdown {
   position: relative;
+
 }
 
 .menu-btn {
-  background-color: white;
   color: black;
+  font-size: 14px;
   border: 1px solid black;
-  border-radius: 5px;
-  padding: 8px 16px;
-  cursor: pointer;
+  border-radius: 130px;
+  padding: 4px 12px;
+  background-color: white;
 }
 
 .menu-btn:hover {
-  background-color: lightgray;
+  background-color: white;
 }
 
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: white;
-  border: 1px solid black;
+  text-align: center;
+  background-color: $pink;
   border-radius: 5px;
-  z-index: 1;
   top: 100%;
   left: 0;
+  font-size: 10px;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 10px 20px;
+  font-size: 12px;
+  padding: 17px 10px 8px 3px;
   display: block;
   text-decoration: none;
+  margin-right: 15px;
+  margin-top: -9px;
 }
 
 .dropdown-content a:hover {
@@ -75,8 +79,10 @@
   display: block;
 }
 
-.login {
-  border: 1px solid black;
-  border-radius: 40px;
-  padding: 0 15px 0 15px;
+.navbar-lewagon .navbar-brand img {
+  width: 130px;
+}
+
+.dropdown-menu {
+  border-color: white;
 }
