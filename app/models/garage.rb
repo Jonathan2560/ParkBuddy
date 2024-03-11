@@ -7,7 +7,7 @@ class Garage < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  validates :address, :width, :length, :price_per_minute, :name, presence: true
+  validates :address, :width_in_meters, :length_in_meters, :price_per_minute, :name, presence: true
 
   def total_earnings
     total = 0
@@ -18,7 +18,8 @@ class Garage < ApplicationRecord
   def renters
     count = 0
     User.all.each do |user|
-      count += 1 if user.reservations
+      user_reservations = user.reservation.select { |reservation| reservation.user == user }
+      count += 1 if user_reservations
     end
     count
   end
