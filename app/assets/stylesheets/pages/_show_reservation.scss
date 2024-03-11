@@ -1,0 +1,35 @@
+.picture_street {
+  width: 120%;
+}
+
+.title_name_reservation {
+  margin-left: 30px;
+}
+
+.title_planned_reservations {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.address-reservation {
+  margin-left: 25px;
+}
+
+.details-reservation {
+  background-color: $pink;
+  width: 110%;
+  padding: 50px;
+  margin-top: -20px;
+}
+
+.btn-go-back-map {
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  background-color: $pink;
+  padding: 15px;
+  font-size: 14px;
+  font-size: 14px;
+  text-decoration: none;
+}
