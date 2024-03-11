@@ -17,9 +17,12 @@ class Garage < ApplicationRecord
 
   def renters
     count = 0
-    User.all.each do |user|
-      user_reservations = user.reservation.select { |reservation| reservation.user == user }
-      count += 1 if user_reservations
+    previous_users = []
+    reservations.each do |reservation|
+      unless previous_users.include?(reservation.user)
+        count += 1
+      end
+      previous_users << reservation.user
     end
     count
   end

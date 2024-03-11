@@ -5,16 +5,16 @@
     <p class="my-4"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
     <div class="row justify-content-between">
       <div class="col-4">
-        <p><i class="fa-solid fa-ruler-vertical"></i>  Width: <%= @garage.length_in_meters %> m</p>
+        <p><i class="fa-solid fa-ruler-vertical"></i>  <strong>W</strong> <%= @garage.length_in_meters %> m</p>
       </div>
       <div class="col-4">
-        <p><i class="fa-solid fa-ruler-horizontal"></i>  Length: <%= @garage.width_in_meters %> m</p>
+        <p><i class="fa-solid fa-ruler-horizontal"></i>  <strong>L</strong> <%= @garage.width_in_meters %> m</p>
       </div>
       <div class="col-4">
         <p><i class="fa-solid fa-square-parking"></i>  <%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
       </div>
     </div>
-    <p><i class="fa-solid fa-tag"></i>  Price: €<%= @garage.price_per_minute * 60 %> per hour</p>
+    <p><i class="fa-solid fa-tag"></i>  Price: €<%= (@garage.price_per_minute * 60).round %> per hour</p>
   </div>
 </div>
 <div class="reservations-banner mt-4">
@@ -37,7 +37,7 @@
   <p class="mt-2">Since <%= @garage.created_at.strftime("%d/%m/%Y") %> you earned €<%= @garage.total_earnings %></p>
   <hr class="my-2">
   <%= image_tag "handshake.png", alt: "handshake", width:80%>
-  <p class="mt-2">You provided a parking spot to <%= @garage.renters %> people!</p>
+  <p class="mt-2">You provided a parking spot to <%= pluralize(@garage.renters, "person") %>!</p>
   <hr class="my-4">
   <%= image_tag "award.png", alt: "award", width:70%>
   <p class="mt-2"><%= @garage.avg_difference %></p>
