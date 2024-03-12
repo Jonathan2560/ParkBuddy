@@ -20,33 +20,21 @@
   width: 110%;
   padding: 25px;
   margin-top: -20px;
-  padding-bottom: 407px;
+  padding-bottom: 50px;
   max-width: 100%;
 }
 
 .btn-go-back-map {
   border-radius: 30px;
-  background-color: transparent;
   border: 1px solid black;
   color: black;
   background-color: $pink;
-  margin-top: 50px;
-  padding: 20px;
-  font-size: 14px;
+  padding: 13px;
   font-size: 14px;
   text-decoration: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.688);
 }
 
 .container {
   max-width: 90%;
-}
-
-.btn-go-back-map {
-  background-color: #ffc0a9;
-  text-shadow: #000000;
-  color: #000000;
-  margin-top: 40px;
-  font-size: 14px;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.688);
-
 }
