@@ -1,9 +1,9 @@
 <%= simple_form_for [@garage, @reservation] do |f| %>
   <%= f.input :from,
             as: :string,
-            input_html: { data: { controller: "datepicker" }, value: DateTime.now } %>
+            input_html: { data: { controller: "datepicker" }, value: DateTime.now, class:"w-100" } %>
   <%= f.input :until,
             as: :string,
             input_html: { data: { controller: "datepicker" }, value: params[:until] } %>
-  <%= f.submit "make a reservation" %>
+  <%= f.submit "READY", class:"btn-ready" %>
 <% end %>

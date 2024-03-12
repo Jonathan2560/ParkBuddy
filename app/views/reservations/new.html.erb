@@ -1,21 +1,17 @@
-<div class="container">
-  <h1>Almost ready!</h1>
-   <%= cl_image_tag @garage.photo.key, height: 300, width: 400, crop: :fill %>
-   <div>
-    <p class="my-4"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
-    <div class="row justify-content-between">
-      <div class="col-4">
-        <p><i class="fa-solid fa-ruler-vertical"></i>  Width: <%= @garage.length_in_meters %> m</p>
-      </div>
-      <div class="col-4">
-        <p><i class="fa-solid fa-ruler-horizontal"></i>  Length: <%= @garage.width_in_meters %> m</p>
-      </div>
-      <div class="col-4">
-        <p><i class="fa-solid fa-square-parking"></i>  <%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
+<h1 class = "title_name_new_book">Almost ready!</h1>
+  <p class="address-new-book"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
+    <%= cl_image_tag @garage.photo.key, class: "picture_street_new", height: 300, width: 400, crop: :fill %>
+    <div class="details-reservation">
+      <h2 class = "title_planned_new_book  pt-4" >LET'S CONFIRM YOUR BOOKING</h2>
+      <HR>
+        <div class="container">
+          <p><span class="fw-medium">Width : </span><%= @garage.length_in_meters %></p>
+          <p><span class="fw-medium">Length : </span><%= @garage.width_in_meters %></p>
+          <p><span class="fw-medium">Surface Area : </span><%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
+          <span class="fw-medium">Price : </span><%= (@garage.price_per_minute * 60).round(2) %>€
+
+      <div class=" mt-4">
+        <%= render "shared/reservation_form" %>
+        </div>
       </div>
     </div>
-    <p><i class="fa-solid fa-tag"></i>  Price: €<%= @garage.price_per_minute * 60 %> per hour</p>
-  </div>
-</div>
-  <%= render "shared/reservation_form" %>
-</div>

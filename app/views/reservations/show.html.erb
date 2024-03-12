@@ -2,17 +2,17 @@
 <p class="address-reservation"><i class="fa-solid fa-location-dot"></i> <%= @reservation.garage.address %></p>
   <%= cl_image_tag @reservation.garage.photo.key, class: "picture_street", height: 300, width: 400, crop: :fill %></p>
   <div class="details-reservation">
-    <h2 class = "title_planned_reservations" >PLANNED BOOKINGS</h2>
+    <h2 class = "title_planned_reservations  pt-4" >PLANNED BOOKINGS</h2>
     <HR>
-  <div class="container mx-4">
-      <span class="fw-medium">From : </span><%= @reservation.from.strftime("%H:%M %d/%m/%Y") %><br>
-      <span class="fw-medium">Until : </span><%= @reservation.until.strftime("%H:%M %d/%m/%Y") %><br>
-      <span class="fw-medium">Price : </span><%= ((((@reservation.until - @reservation.from)).to_i / 60) * @reservation.garage.price_per_minute).round %>€</p>
+      <div class="container">
+        <span class="fw-medium">From : </span><%= @reservation.from.strftime("%H:%M %d/%m/%Y") %><br>
+        <span class="fw-medium">Until : </span><%= @reservation.until.strftime("%H:%M %d/%m/%Y") %><br>
+        <span class="fw-medium">Price : </span><%= ((((@reservation.until - @reservation.from)).to_i / 60) * @reservation.garage.price_per_minute).round %>€</p>
 
-      Thank you for parking with ParkBuddy today. Have a lovely day!
+        Thank you for parking with ParkBuddy today. Have a lovely day!
 
-    <div class="d-flex justify-content-center">
-      <%= link_to "GO BACK MAP", garages_path, class:"btn-go-back-map mt-4" %>
-    </div>
-   </div>
+          <div class="d-flex justify-content-center mt-4">
+            <%= link_to "GO BACK MAP", garages_path, class:"btn-go-back-map mt-4 btn-go-back-map" %>
+          </div>
+      </div>
   </div>
