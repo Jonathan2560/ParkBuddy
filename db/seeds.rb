@@ -291,34 +291,64 @@ garage20 = Garage.new(name:"Lorenz's parking",
   puts "Created #{garage20}"
 
 # Bookings from users
-Reservation.create!(from: DateTime.new(2024, 4, 10, 8, 0), until: DateTime.new(2024, 4, 10, 10, 0), garage: garage1, user: user1)
+res1 = Reservation.new(from: DateTime.new(2024, 4, 10, 8, 0), until: DateTime.new(2024, 4, 10, 10, 0), garage: garage1, user: user1)
+res1.price_cents = res1.calc_total_price
+res1.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 4, 11, 9, 0), until: DateTime.new(2024, 4, 11, 13, 0), garage: garage2, user: user2)
+res2 = Reservation.new(from: DateTime.new(2024, 4, 11, 9, 0), until: DateTime.new(2024, 4, 11, 13, 0), garage: garage2, user: user2)
+res2.price_cents = res2.calc_total_price
+res2.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 4, 12, 11, 0), until: DateTime.new(2024, 4, 12, 13, 0), garage: garage2, user: user2)
+res3 = Reservation.new(from: DateTime.new(2024, 4, 12, 11, 0), until: DateTime.new(2024, 4, 12, 13, 0), garage: garage2, user: user2)
+res3.price_cents = res3.calc_total_price
+res3.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 5, 4, 17, 0), until: DateTime.new(2024, 5, 4, 18, 0), garage: garage12, user: user12)
+res4 = Reservation.new(from: DateTime.new(2024, 5, 4, 17, 0), until: DateTime.new(2024, 5, 4, 18, 0), garage: garage12, user: user12)
+res4.price_cents = res4.calc_total_price
+res4.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 5, 7, 14, 0), until: DateTime.new(2024, 5, 7, 18, 0), garage: garage9, user: user9)
+res5 = Reservation.new(from: DateTime.new(2024, 5, 7, 14, 0), until: DateTime.new(2024, 5, 7, 18, 0), garage: garage9, user: user9)
+res5.price_cents = res5.calc_total_price
+res5.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 5, 8, 11, 0), until: DateTime.new(2024, 5, 8, 18, 0), garage: garage9, user: user9)
+res6 = Reservation.new(from: DateTime.new(2024, 5, 8, 11, 0), until: DateTime.new(2024, 5, 8, 18, 0), garage: garage9, user: user9)
+res6.price_cents = res6.calc_total_price
+res6.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage10, user: user10)
+res7 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage10, user: user10)
+res7.price_cents = res7.calc_total_price
+res7.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage9, user: user9)
+res8 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage9, user: user9)
+res8.price_cents = res8.calc_total_price
+res8.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage8, user: user8)
+res9 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage8, user: user8)
+res9.price_cents = res9.calc_total_price
+res9.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage7, user: user7)
+res10 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage7, user: user7)
+res10.price_cents = res10.calc_total_price
+res10.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage6, user: user6)
+res11 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage6, user: user6)
+res11.price_cents = res11.calc_total_price
+res11.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage5, user: user5)
+res12 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage5, user: user5)
+res12.price_cents = res12.calc_total_price
+res12.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage4, user: user4)
+res13 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage4, user: user4)
+res13.price_cents = res13.calc_total_price
+res13.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage3, user: user3)
+res14 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage3, user: user3)
+res14.price_cents = res14.calc_total_price
+res14.save
 puts "reservation created"
-Reservation.create!(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage2, user: user2)
+res15 = Reservation.new(from: DateTime.new(2024, 3, 15, 11, 0), until: DateTime.new(2024, 4, 15, 18, 0), garage: garage2, user: user2)
+res15.price_cents = res15.calc_total_price
+res15.save
 puts "reservation created"
 puts "Seed done!"
