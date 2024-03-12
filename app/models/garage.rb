@@ -7,7 +7,7 @@ class Garage < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  validates :address, :width_in_meters, :length_in_meters, :price_per_minute, :name, presence: true
+  #validates :address, :width_in_meters, :length_in_meters, :price_per_minute, :name, presence: true
 
   def total_earnings
     total = 0

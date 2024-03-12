@@ -1,0 +1,5 @@
+<%= simple_form_for @garage, url: { action: :create } do |f| %>
+<%= f.input :width_in_meters %>
+ <%= f.input :length_in_meters %>
+  <%= f.button :submit %>
+<% end %>

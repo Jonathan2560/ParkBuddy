@@ -32,13 +32,23 @@ class GaragesController < ApplicationController
     @garage = Garage.new
   end
 
+  def step2
+    @garage = Garage.new(garage_params)
+    render 'new' unless @garage.valid?
+  end
+
+  def step3
+    @garage = Garage.new(garage_params)
+    render 'step2' unless @garage.valid?
+  end
+
   def create
     @garage = Garage.new(garage_params)
     @garage.user = current_user
     if @garage.save
       redirect_to garage_path(@garage)
     else
-      render :new, status: :unprocessable_entity
+      render 'step3'
     end
   end
 
