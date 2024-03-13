@@ -26,6 +26,8 @@ class GaragesController < ApplicationController
   end
 
   def show
+    content = "https://www.parkbuddy.me/garages/#{@garage.id}/reservations/new"
+    @qr_png = RQRCode::QRCode.new(content).as_png
   end
 
   def new
