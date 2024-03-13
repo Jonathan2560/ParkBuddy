@@ -26,6 +26,8 @@ class GaragesController < ApplicationController
   end
 
   def show
+    content = "https://www.parkbuddy.me/garages/#{@garage.id}/reservations/new"
+    @qr_png = RQRCode::QRCode.new(content).as_png
   end
 
   def new
@@ -54,7 +56,7 @@ class GaragesController < ApplicationController
   end
 
   def garage_params
-    params.require(:garage).permit(:photo, :address, :width, :length, :price_per_minute, :name)
+    params.require(:garage).permit(:photo, :address, :width_in_meters, :length_in_meters, :price_per_minute, :name)
 
   end
 end

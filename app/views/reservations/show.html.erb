@@ -2,7 +2,7 @@
 <p class="address-reservation"><i class="fa-solid fa-location-dot"></i> <%= @reservation.garage.address %></p>
   <%= cl_image_tag @reservation.garage.photo.key, class: "picture_street", height: 300, width: 400, crop: :fill %></p>
   <div class="details-reservation">
-    <h2 class = "title_planned_reservations  pt-4" >PLANNED BOOKINGS</h2>
+    <h2 class = "title_planned_reservations  pt-4" >BOOKING DETAILS</h2>
     <HR>
       <div class="container">
         <span class="fw-medium">From : </span><%= @reservation.from.strftime("%H:%M %d/%m/%Y") %><br>

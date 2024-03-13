@@ -1,11 +1,11 @@
 .card-product {
   overflow: hidden;
-  height: 180px;
+  height: 230px;
   background: $pink;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2cqi;
 }
 
 .card-product img {
@@ -15,26 +15,29 @@
 }
 
 .card-product h2 {
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 13px;
   margin: 0;
 }
 
 .card-product h3 {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
+  margin-bottom: 2px;
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
+.card-product {
+  padding: 13px;
+}
+
+.card-product-infos {
+  padding: 5px 4px 12px 9px;
 }
 
 .no-reservations-text {
@@ -57,7 +60,20 @@
   background-color: transparent;
   border: 1px solid black;
   color: black;
-  padding: 5px;
+  padding: 15px;
   font-size: 14px;
   text-decoration: none;
+  width: 7px;
+}
+
+.btn-cancell {
+  border-radius: 30px;
+  padding: 6px;
+  font-size: 12px;
+  text-decoration: none;
+  width: 7px;
+  background-color: #ffc0a9;
+  text-shadow: #000000;
+  color: #000000;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.688);
 }

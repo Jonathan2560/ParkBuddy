@@ -1,15 +1,15 @@
 <div class="container p-4">
-  <h1>Your reservations</h1>
+  <h1>Your bookings.</h1>
   <% if @reservations %>
     <% @reservations.each do |reservation| %>
       <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+         <%= cl_image_tag reservation.garage.photo.key, class: "picture_streett", height: 400, width: 300, crop: :fill %></p>
         <div class="card-product-infos">
-          <h2>Your spot is @<%= reservation.garage.address %></h2>
-          <h3 class="mt-2">Price: €<%= ((((reservation.until - reservation.from)).to_i / 60) * reservation.garage.price_per_minute).round %></h3>
-          <p class="mb-2"><strong>From:</strong> <%= reservation.from.strftime("%H:%M %d/%m/%Y") %>,<br><strong>until:</strong> <%= reservation.until.strftime("%H:%M %d/%m/%Y") %></p>
-          <%= link_to "Cancel",
-            reservation_path(reservation), class:"btn-cancel",
+          <p>YOUR SPOT IS <br><span class="fw-medium">@<%= reservation.garage.address %></span></p>
+          <p class="mt-2"><span class="fw-medium">Price: </span><%= ((((reservation.until - reservation.from)).to_i / 60) * reservation.garage.price_per_minute).round %> €</p>
+          <p class="mb-2"><span class="fw-medium">From : </span><%= reservation.from.strftime("%H:%M %d/%m/%Y") %>,<br><span class="fw-medium">Until : </span> <%= reservation.until.strftime("%H:%M %d/%m/%Y") %></p>
+          <%= link_to "CANCELATION",
+            reservation_path(reservation), class:"btn-cancell",
             data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
           %>
         </div>
