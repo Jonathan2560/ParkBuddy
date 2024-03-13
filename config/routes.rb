@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   resources :garages, only: [:show, :index, :new, :create, :destroy] do
     resources :reservations, only: [:new, :create]
   end
+
   resources :reservations, only: [:destroy, :index, :show]
+
   resources :availibilities, only: :create
+
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
 end

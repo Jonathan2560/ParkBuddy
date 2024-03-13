@@ -18,8 +18,10 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.create(reservation_params)
     @reservation.user = current_user
     @reservation.garage = @garage
+    @reservation.price_cents = @reservation.calc_total_price
     if @reservation.save
-      redirect_to reservation_path(@reservation)
+      creating_order(@reservation)
+      # redirect_to reservation_path(@reservation)
     else
       render :new, status: :unprocessable_entity
     end
@@ -32,6 +34,30 @@ class ReservationsController < ApplicationController
   end
 
   private
+
+  def creating_order(reservation)
+    order = Order.create!(reservation: reservation, amount: reservation.price, state: 'pending', user: current_user)
+    session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      line_items: [{
+        price_data: {
+          currency: 'eur',
+          product_data: {
+            name: "Parking @#{reservation.garage.address}",
+            description: "From #{reservation.from}, until #{reservation.until}."
+          },
+          unit_amount: reservation.price_cents
+        },
+        quantity: 1
+      }],
+      mode: 'payment',
+      success_url: order_url(order),
+      cancel_url: order_url(order)
+    )
+
+    order.update(checkout_session_id: session.id)
+    redirect_to new_order_payment_path(order)
+  end
 
   def set_garage
     @garage = Garage.find(params[:garage_id])
