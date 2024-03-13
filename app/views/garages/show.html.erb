@@ -36,19 +36,28 @@
     <p>No reservations planned for now.</p>
   <% end %>
 </div>
-<div class="container text-center my-4 pb-4">
-  <%= image_tag "earnings.png", alt: "money", width:60%>
-  <p class="mt-2">Since <%= @garage.created_at.strftime("%d/%m/%Y") %> you earned €<%= @garage.total_earnings %></p>
-  <hr class="my-2">
-  <%= image_tag "handshake.png", alt: "handshake", width:80%>
-  <p class="mt-2">You provided a parking spot to <%= pluralize(@garage.renters, "person") %>!</p>
-  <hr class="my-4">
-  <%= image_tag "award.png", alt: "award", width:70%>
-  <p class="mt-2"><%= @garage.avg_difference %></p>
-  <hr class="my-4 pb-3">
-    <%= link_to "REMOVE PARKING",
-            garage_path(@garage), class:"btn-cancel mt-4",
-            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-    %>
-</div>
+
+  <div class="container text-center my-4 pb-4">
+
+
+    <h2 class = "fw-medium try_it_out" >TRY IT OUT</h2>
+
+      <%= image_tag(@qr_png.to_data_url, class:"qr-code") %>
+        <p class="text_qr_code">Every owner receives a unique QR code from us. This enables people to instantly book your spot when they see it as they pass by!</p>
+      <hr class="my-2">
+
+      <%= image_tag "earnings.png", alt: "money", width:60%>
+      <p class="mt-2">Since <%= @garage.created_at.strftime("%d/%m/%Y") %> you earned €<%= @garage.total_earnings %></p>
+      <hr class="my-2">
+      <%= image_tag "handshake.png", alt: "handshake", width:80%>
+      <p class="mt-2">You provided a parking spot to <%= pluralize(@garage.renters, "person") %>!</p>
+      <hr class="my-4">
+      <%= image_tag "award.png", alt: "award", width:70%>
+      <p class="mt-2"><%= @garage.avg_difference %></p>
+      <hr class="my-4 pb-3">
+        <%= link_to "REMOVE PARKING",
+                garage_path(@garage), class:"btn-cancel mt-4",
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+  </div>
 </div>
