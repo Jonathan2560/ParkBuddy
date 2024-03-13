@@ -54,6 +54,7 @@ gem "geocoder"
 gem "cloudinary"
 gem 'money-rails'
 gem 'stripe'
+gem 'stripe_event'
 gem 'rqrcode'
 
 group :development, :test do
