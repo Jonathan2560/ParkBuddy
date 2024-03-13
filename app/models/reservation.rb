@@ -2,6 +2,8 @@ class Reservation < ApplicationRecord
   belongs_to :user
   belongs_to :garage
 
+  has_many :orders, dependent: :destroy
+
   monetize :price_cents
 
   validates :from, :until, presence: true
