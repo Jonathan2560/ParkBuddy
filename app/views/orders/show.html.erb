@@ -10,7 +10,7 @@
       <div class="container">
         <span class="fw-medium">From : </span><%= @order.reservation.from.strftime("%H:%M %d/%m/%Y") %><br>
         <span class="fw-medium">Until : </span><%= @order.reservation.until.strftime("%H:%M %d/%m/%Y") %><br>
-        <span class="fw-medium">Price : €</span><%= ((((@order.reservation.until - @order.reservation.from)).to_i / 60) * @order.reservation.garage.price_per_minute).round %></p>
+        <span class="fw-medium">Price : </span>€<%= ((((@order.reservation.until - @order.reservation.from)).to_i / 60) * @order.reservation.garage.price_per_minute).round %></p>
 
         Thank you for parking with ParkBuddy today. Have a lovely day!
 
