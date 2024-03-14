@@ -3,7 +3,7 @@ class GaragesController < ApplicationController
   before_action :set_garage, only: [:show, :destroy]
 
   def index
-    radius = 1
+    radius = 0.4
     @garages = Garage.near(params[:address], radius)
 
     if params[:until].present?
