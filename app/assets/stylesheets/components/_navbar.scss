@@ -36,7 +36,7 @@
 .menu-dropdown {
   position: relative;
   font-size: 12px;
-
+  margin-right: 17px
 }
 
 .menu-btn {
@@ -55,7 +55,9 @@
 .dropdown-content {
   display: none;
   text-align: center;
-  background-color: $pink;
+  background-color: #ffc3ada0;
+  color: black;
+  text-align: right;
   border-radius: 5px;
   top: 100%;
   left: 0;
@@ -65,7 +67,7 @@
 .dropdown-content a {
   color: black;
   font-size: 12px;
-  padding: 8px 10px 8px 3px;
+  padding: 8px 10px 6px 10px;
   display: block;
   text-decoration: none;
   margin-right: 15px;
@@ -87,4 +89,8 @@
 .dropdown-menu {
   border-color: white;
   padding-bottom: 0 !important;
+  --bs-dropdown-min-width: 0;
+  ;
 }
+
+.dropdown-item {}
