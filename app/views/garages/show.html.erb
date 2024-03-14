@@ -17,12 +17,12 @@
         <p><strong>Surface Area : </strong> <%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
       </div>
       <div class="col-6">
-        <p><strong>Price : </strong><%= (@garage.price_per_minute * 60).round %> €/hour</p>
+        <p><strong>Price : €</strong><%= (@garage.price_per_minute * 60).round %>/hour</p>
       </div>
     </div>
 </div>
 <div class="reservations-banner mt-4">
-  <h2 class = "title_planned_bookings" >PLANNED BOOKINGS</h2>
+  <h2 class = "title_planned_bookings" >GARAGE BOOKINGS</h2>
   <hr>
 
   <% if @garage.reservations.any? %>
@@ -33,6 +33,7 @@
           <span class="fw-medium">Until :</span> <%= reservation.until.strftime("%H:%M --- %d/%m/%Y") %><br>
           <span class="fw-medium">Earnings :</span> <%= ((((reservation.until - reservation.from)).to_i / 60) * @garage.price_per_minute).round %> € <br>
           <span class="fw-medium">Username :</span> <%= reservation.user.email %>
+          <br><br>
         </li>
       <% end %>
     </ul>

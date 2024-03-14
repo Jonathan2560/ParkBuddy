@@ -11,7 +11,7 @@
           <p><span class="fw-medium">Width : </span><%= @garage.length_in_meters %>m</p>
           <p><span class="fw-medium">Length : </span><%= @garage.width_in_meters %>m</p>
           <p><span class="fw-medium">Surface Area : </span><%= @garage.length_in_meters * @garage.width_in_meters %> m<sup>2</sup></p>
-          <span class="fw-medium">Price : </span><%= (@garage.price_per_minute * 60).round(2) %>€
+          <span class="fw-medium">Price/hour : €</span><%= (@garage.price_per_minute * 60).round(2) %>
 
       <div class=" mt-4">
         <%= render "shared/reservation_form" %>
