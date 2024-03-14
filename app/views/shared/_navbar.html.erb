@@ -12,14 +12,14 @@
       <div class="dropdown-content">
         <% if user_signed_in? %>
           <% if Reservation.where(user: current_user).any? %>
-            <%= link_to "MY BOOKINGS", reservations_path, class: "dropdown-item" %>
+            <%= link_to "My Bookings", reservations_path, class: "dropdown-item" %>
           <% end %>
           <% if Garage.where(user: current_user).any? %>
-            <%= link_to "MY GARAGE", garage_path(Garage.find_by(user: current_user)), class: "dropdown-item" %>
+            <%= link_to "My Garage", garage_path(Garage.find_by(user: current_user)), class: "dropdown-item" %>
           <% end %>
-          <%= link_to "LOG OUT", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+          <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
         <% else %>
-          <%= link_to "LOGIN", new_user_session_path, class: "dropdown-item" %>
+          <%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
         <% end %>
       </div>
     </div>
