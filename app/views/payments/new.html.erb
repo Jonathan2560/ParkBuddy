@@ -4,9 +4,11 @@
 <div class="container">
   <div class="row py-4 text-center center-margin">
     <div class="col">
-      <h1>Checkout</h1>
-      <p>Purchase of parking @<strong><%= @order.reservation.garage.address %></strong> from <strong><%= @order.reservation.from.strftime("%H:%M %d/%m/%Y") %></strong>, until <strong><%= @order.reservation.until.strftime("%H:%M %d/%m/%Y") %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong>.</p>
-      <button id="pay" class="btn button-payment">Pay <%= humanized_money_with_symbol @order.amount %></button>
+      <h1 class="title_checkout">Checkout</h1>
+      <p class="informations_purchase">PURCHASE OF PARKING<br>
+      <hr>
+       <span class="fw-medium"><%= @order.reservation.garage.address %></span><br> from <span class="fw-medium"><%= @order.reservation.from.strftime("%H:%M %d/%m/%Y") %></span>, until <span class="fw-medium"><%= @order.reservation.until.strftime("%H:%M %d/%m/%Y") %></span></p>
+      <button id="pay" class="btn button-payment">PAY <%= humanized_money_with_symbol @order.amount %></button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');

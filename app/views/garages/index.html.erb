@@ -11,8 +11,12 @@
 
 
     <%= form_with url: garages_path, method: :get, html: { class:"timing_box" } do |f| %>
-      <h2 class="when_parking">When are you parking?</h2>
+     <div class="d-flex flex-column justify-content-center">
+     <h2 class="when_parking">When are you parking?</h2>
+      <p class="date_text_timing">FROM :</p>
+      </div>
       <%= f.datetime_local_field :from, value: params[:from], class:"timing"  %>
+      <p class="date_text_timing">UNTIL :</p>
       <%= f.datetime_local_field :until, value: params[:until], class:"timing" %>
       <%= f.hidden_field :address, value: params[:address] %>
       <%= f.submit "SELECT YOUR TIME", class: "select_your_time_button" %>

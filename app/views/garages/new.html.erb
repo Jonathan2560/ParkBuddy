@@ -4,21 +4,21 @@
 <div class="addparkingform">
   <div class="container mx-4 negative-margin", data-controller="form">
       <h2 class="text-center started">Add a parking.</h2>
-      <%= simple_form_for @garage, defaults: { input_html: { class: 'rounded-pill border border-dark text-black' }, label_html: { class: 'text-uppercase' } } do |f| %>
+      <%= simple_form_for @garage, defaults: { input_html: { class: 'rounded-pill border border-dark text-black mt-2' } } do |f| %>
 
         <div data-form-target="group1" class="text-center">
-          <%= f.input :photo, as: :file, label: "Show uw your street view." %>
-          <a class="btn w-50 rounded-pill next-button" data-action="click->form#forward1">Next</a>
+          <%= f.input :photo, as: :file, label: "Show us your street view" %>
+          <a class="btn w-50 rounded-pill next-button" data-action="click->form#forward1">NEXT</a>
         </div>
 
         <div data-form-target="group2" class="d-none text-center">
           <%= f.input :name, label: "What's the name?" %>
-          <a class="btn w-50 rounded-pill next-button" data-action="click->form#forward2">Next</a>
+          <a class="btn w-50 rounded-pill next-button" data-action="click->form#forward2">NEXT</a>
         </div>
 
         <div data-form-target="group3" class="d-none text-center">
           <%= f.input :address, label: "What's your address?" %>
-          <a class="btn w-50 rounded-pill next-button" data-action="click->form#forward3">Next</a>
+          <a class="btn w-50 rounded-pill next-button" data-action="click->form#forward3">NEXT</a>
         </div>
 
         <div class="d-none text-center" data-form-target="group4">
@@ -30,7 +30,7 @@
               <%= f.input :length_in_meters, label: "Length" %>
             </div>
           </div>
-          <a class="btn w-50 rounded-pill next-button" data-action="click->form#forward4">Next</a>
+          <a class="btn w-50 rounded-pill next-button" data-action="click->form#forward4">NEXT</a>
         </div>
 
         <div class="d-none" data-form-target="group5">

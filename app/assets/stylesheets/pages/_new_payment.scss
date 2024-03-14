@@ -1,15 +1,25 @@
 .button-payment {
-  margin: 10px auto 0 auto;
-  padding: 20px 40px;
+  margin: 26px auto 0 auto;
+  padding: 11px 29px;
   background-color: white;
   text-decoration: none;
   color: black;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1.2em;
+  border-radius: 51px;
+  font-weight: 400;
+  font-size: 16px;
   border: 1px solid black;
+  background-color: #FFC3AD;
 }
 
 .center-margin {
   margin-top: 9em;
+}
+
+.informations_purchase {
+  font-size: 16px;
+}
+
+.title_checkout {
+  margin-bottom: 36px;
+  margin-top: 37px;
 }
