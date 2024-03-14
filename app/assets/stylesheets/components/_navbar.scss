@@ -36,7 +36,7 @@
 .menu-dropdown {
   position: relative;
   font-size: 12px;
-  margin-right: 17px
+  margin-right: 2px
 }
 
 .menu-btn {
@@ -44,7 +44,8 @@
   font-size: 12px;
   border: 1px solid black;
   border-radius: 130px;
-  padding: 4px 12px;
+  padding: 4px 26px;
+  margin-left: 16px;
   background-color: white;
 }
 
@@ -57,7 +58,6 @@
   text-align: center;
   background-color: #ffc3ada0;
   color: black;
-  text-align: right;
   border-radius: 5px;
   top: 100%;
   left: 0;
@@ -67,10 +67,8 @@
 .dropdown-content a {
   color: black;
   font-size: 12px;
-  padding: 8px 10px 6px 10px;
-  display: block;
+  padding: 8px 33px 6px 10px;
   text-decoration: none;
-  margin-right: 15px;
   margin-top: -9px;
 }
 
@@ -92,5 +90,3 @@
   --bs-dropdown-min-width: 0;
   ;
 }
-
-.dropdown-item {}
