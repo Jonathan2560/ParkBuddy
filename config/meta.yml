@@ -1,0 +1,5 @@
+meta_product_name: "ParkBuddy"
+meta_title: "ParkBuddy - Parking Made Simple!"
+meta_description: "A web app to rent parking spots (in front of people garage's) in the city! You can also rent out your own parking spot in front of your garage."
+meta_image: "Cover.jpg" # should exist in `app/assets/images/`
+twitter_account: "" # required for Twitter Cards

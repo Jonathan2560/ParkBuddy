@@ -1,3 +1,6 @@
+<% content_for :meta_title, "Your Garage" %>
+<% content_for :meta_description, "Overview of your own garage/parking/spot" %>
+
 <h1 class = "title_name_garage"><%=@garage.name%>.</h1>
 <p class="address-garage"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
   <%= cl_image_tag @garage.photo.key, class: "width-90", crop: :fill %>

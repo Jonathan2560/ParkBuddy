@@ -1,3 +1,6 @@
+<% content_for :meta_title, "Make a reservation" %>
+<% content_for :meta_description, "Make a reservation for the spot @#{@garage.address}." %>
+
 <h1 class = "title_name_new_book">Almost ready!</h1>
   <p class="address-new-book"><i class="fa-solid fa-location-dot"></i>  <%= @garage.address %></p>
     <%= cl_image_tag @garage.photo.key, class: "picture_street_new", height: 300, width: 400, crop: :fill %>
