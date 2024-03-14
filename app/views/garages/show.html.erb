@@ -20,8 +20,9 @@
 </div>
 <div class="reservations-banner mt-4">
   <h2 class = "title_planned_bookings" >PLANNED BOOKINGS</h2>
-  <HR>
-  <% if @garage.reservations  %>
+  <hr>
+
+  <% if @garage.reservations.any? %>
     <ul>
       <% @garage.reservations.each do |reservation| %>
         <li>
@@ -33,7 +34,7 @@
       <% end %>
     </ul>
   <% else %>
-    <p>No reservations planned for now.</p>
+    <p class="text-center" >No reservations planned for now.</p>
   <% end %>
 </div>
 
